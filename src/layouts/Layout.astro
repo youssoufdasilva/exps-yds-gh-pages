@@ -10,7 +10,7 @@ import PostHog from '../components/posthog.astro'
 		<link rel="icon" type="image/png" href="/apple-icon.png" style="background-color: white; border-radius: 50%;" />
 		<meta name="generator" content={Astro.generator} />
 		<title>YdS GH Pages</title>
-		<PostHog />
+		<PostHog client:load />
 	</head>
 	<body>
 		<slot />
