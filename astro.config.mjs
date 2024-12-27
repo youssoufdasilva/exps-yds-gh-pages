@@ -4,7 +4,7 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  site: "https://gh-pages.youssoufdasilva.com",
+  site: "https://exps.youssoufdasilva.com",
   integrations: [
     react({
       experimentalReactChildren: true,

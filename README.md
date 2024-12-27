@@ -47,6 +47,31 @@ All commands are run from the root of the project, from a terminal:
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
+# How to setup
+
+What you need:
+
+- new app url (you need to configure it on cloudflare)
+  - set the new url to be a CNAME pointing to `youssoufdasilva.github.io`
+- new posthog api_key (you need a new project on posthog)
+  https://posthog.com/
+
+This project is setup with:
+
+- PostHog for analytics
+- Github Actions for automatic deployment
+- Shadcn for easy styles
+
+You can git clone the project and push an initial version without
+
+- Change the app url:
+
+  - in astro.config.mjs
+  - in the CNAME file in `public`
+  - on GitHub Pages
+
+- Change the PostHog api_key in components/posthog.astro
+
 #### Deployed to Github pages using this guide
 
 https://docs.astro.build/en/guides/deploy/github/
