@@ -81,6 +81,7 @@ export type CardDataProps = {
   content: string;
   image?: string;
   video?: string;
+  url?: string;
 };
 
 type FeatureProps = {
@@ -230,7 +231,19 @@ const Feature = ({
                     <AccordionTrigger className="text-xl font-bold">
                       {item.title}
                     </AccordionTrigger>
-                    <AccordionContent>{item.content}</AccordionContent>
+                    <AccordionContent>
+                      {item.content}
+                      {item.url && (
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-500 hover:text-blue-600 underline block"
+                        >
+                          {item.url}
+                        </a>
+                      )}
+                    </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion.Root>
@@ -295,6 +308,16 @@ const Feature = ({
                   <h2 className="text-xl font-bold">{item.title}</h2>
                   <p className="mx-0 max-w-sm text-balance text-sm">
                     {item.content}
+                    {item.url && (
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-500 hover:text-blue-700 underline block"
+                      >
+                        {item.url}
+                      </a>
+                    )}
                   </p>
                 </a>
               ))}
