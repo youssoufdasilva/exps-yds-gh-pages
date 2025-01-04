@@ -275,7 +275,7 @@ const Feature = ({
                   muted
                 />
               ) : (
-                <div className="aspect-auto h-full w-full rounded-xl border border-neutral-300/50 bg-gray-200 p-1 flex justify-center items-center">
+                <div className="aspect-auto h-full w-full rounded-xl border border-neutral-300/75 bg-gray-100 p-4 flex justify-center items-center">
                   <SparklesText text={cardData[currentIndex]?.title || ""} />
                 </div>
               )}
