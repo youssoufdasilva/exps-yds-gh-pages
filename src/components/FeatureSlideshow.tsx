@@ -12,6 +12,7 @@ import { motion, useInView } from "framer-motion";
 
 import { cn } from "@/lib/utils";
 import { cardData } from "./FeatureCardData";
+import SparklesText from "@/components/ui/sparkles-text";
 
 type AccordionItemProps = {
   children: React.ReactNode;
@@ -274,7 +275,9 @@ const Feature = ({
                   muted
                 />
               ) : (
-                <div className="aspect-auto h-full w-full rounded-xl border border-neutral-300/50 bg-gray-200 p-1"></div>
+                <div className="aspect-auto h-full w-full rounded-xl border border-neutral-300/50 bg-gray-200 p-1 flex justify-center items-center">
+                  <SparklesText text={cardData[currentIndex]?.title || ""} />
+                </div>
               )}
             </div>
 
@@ -329,6 +332,6 @@ const Feature = ({
   );
 };
 
-export function FeatureSection() {
+export default function FeatureSlideshow() {
   return <Feature collapseDelay={5000} linePosition="left" />;
 }
